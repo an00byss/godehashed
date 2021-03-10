@@ -1,5 +1,5 @@
 # Godehashed
-A golang tool that uses the dehashed API to search for compromised assets.
+A golang tool that uses the dehashed.com API to search for compromised assets.
 
 ## Screenshot
 
