@@ -37,6 +37,13 @@ Specify what we are searching for: "name", "email" or "username". Then add corre
 Username we are searching for
 ```
 
+|       Search Term         |Examples                         |
+|----------------|-------------------------------|
+|Email|`godehashed -s email -i apikey.txt -e SOMEDOMAIN.com -o leaks.csv`            |
+|Username          |`godehashed -s username -i apikey.txt -u USERNAME -o leaks.csv`            |
+|Name          |`godehashed -s name -i apikey.txt -n "Name" -o leaks.csv`|
+|Phone          |`godehashed -s name -i apikey.txt -p "Phone Number" -o leaks.csv`|
+
 ## Notice
 
 ```
