@@ -1,5 +1,6 @@
+
 # Godehashed
-A golang tool that uses the dehashed.com API to search for compromised assets.
+A golang tool that uses the dehashed.com API to search for compromised assets. Results can then be compiled into a CSV for further analysis.
 
 ## Screenshot
 
@@ -8,7 +9,12 @@ A golang tool that uses the dehashed.com API to search for compromised assets.
 ## Dehashed API
 
 You must supply the tool an api key. See apikey_template.txt for example.
-Use with switch ./godehashed -i apikey.txt
+Use with switch ./godehashed -s email -i apikey.txt -e SOMEDOMAIN -o leaks.csv
+
+## Installation
+
+To install the tool in CLI run the following command. Your $GOPATH must already be set.
+```go get https://github.com/an00byss/godehashed```
 
 ## Usage
 
@@ -25,7 +31,7 @@ Outfile file name, will output in CSV Format.
 -p int  
 Phone number we are searching for  
 -s string  
-Specify what we are searching for: name, email or username. Then Add corrisponding switch.  
+Specify what we are searching for: "name", "email" or "username". Then add corresponding switch.  
 -u string  
 Username we are searching for
 ```
