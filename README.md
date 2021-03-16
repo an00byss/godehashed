@@ -14,6 +14,7 @@ Use with switch ./godehashed -s email -i apikey.txt -e SOMEDOMAIN -o leaks.csv
 ## Installation
 
 To install the tool in CLI run the following command. Your $GOPATH must already be set.
+
 ```go get https://github.com/an00byss/godehashed```
 
 ## Usage
