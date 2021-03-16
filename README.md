@@ -32,7 +32,7 @@ Outfile file name, will output in CSV Format.
 -p int  
 Phone number we are searching for  
 -s string  
-Specify what we are searching for: "name", "email" or "username". Then add corresponding switch.  
+Specify what we are searching for: "name", "email", "phone" or "username". Then add corresponding switch.  
 -u string  
 Username we are searching for
 ```
@@ -42,7 +42,7 @@ Username we are searching for
 |Email|`godehashed -s email -i apikey.txt -e SOMEDOMAIN.com -o leaks.csv`            |
 |Username          |`godehashed -s username -i apikey.txt -u USERNAME -o leaks.csv`            |
 |Name          |`godehashed -s name -i apikey.txt -n "Name" -o leaks.csv`|
-|Phone          |`godehashed -s name -i apikey.txt -p "Phone Number" -o leaks.csv`|
+|Phone          |`godehashed -s phone -i apikey.txt -p "phonenumber" -o leaks.csv`|
 
 ## Notice
 
