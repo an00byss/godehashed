@@ -9,7 +9,6 @@ A golang tool that uses the dehashed.com API to search for compromised assets. R
 ## Dehashed API
 
 You must supply the tool an api key. See apikey_template.txt for example.
-Use with switch ./godehashed -s email -i apikey.txt -e SOMEDOMAIN -o leaks.csv
 
 ## Installation
 
@@ -18,9 +17,10 @@ To install the tool in CLI run the following command. Your $GOPATH must already 
 ```go get https://github.com/an00byss/godehashed```
 
 ## Usage
+./godehashed -s email -i apikey.txt -e SOMEDOMAIN -o leaks.csv
 
 ```
-Usage():
+Godehashed Usage():
 -e string  
 Email we are searching for  
 -i string  
