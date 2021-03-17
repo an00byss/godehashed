@@ -35,6 +35,8 @@ Phone number we are searching for
 Specify what we are searching for: "name", "email", "phone" or "username". Then add corresponding switch.  
 -u string  
 Username we are searching for
+-l list  
+Search a list of emails.
 ```
 
 |       Search Term         |Examples                         |
@@ -43,6 +45,7 @@ Username we are searching for
 |Username          |`godehashed -s username -i apikey.txt -u USERNAME -o leaks.csv`            |
 |Name          |`godehashed -s name -i apikey.txt -n "Name" -o leaks.csv`|
 |Phone          |`godehashed -s phone -i apikey.txt -p "phonenumber" -o leaks.csv`|
+|list          |`godehashed -e email -i apikey.txt -l list.txt -o leaks.csv`|
 
 ## Notice
 
