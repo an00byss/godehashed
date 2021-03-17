@@ -42,10 +42,10 @@ Search a list of emails.
 |       Search Term         |Examples                         |
 |----------------|-------------------------------|
 |Email|`godehashed -s email -i apikey.txt -e SOMEDOMAIN.com -o leaks.csv`            |
+|List          |`godehashed -s list -e email -i apikey.txt -l list.txt -o leaks.csv`|
 |Username          |`godehashed -s username -i apikey.txt -u USERNAME -o leaks.csv`            |
 |Name          |`godehashed -s name -i apikey.txt -n "Name" -o leaks.csv`|
 |Phone          |`godehashed -s phone -i apikey.txt -p "phonenumber" -o leaks.csv`|
-|list          |`godehashed -e email -i apikey.txt -l list.txt -o leaks.csv`|
 
 ## Notice
 
