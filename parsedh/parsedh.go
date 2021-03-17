@@ -49,18 +49,14 @@ func ParseDH(body []byte, outfile string) {
 
 	// If outfile is not empty will export data to outfile.
 	if outfile != "" {
-		csvFile, err := os.Create(outfile + ".csv")
-
+		csvFile, err := os.OpenFile(outfile, os.O_APPEND|os.O_WRONLY, 0600)
 		if err != nil {
-			fmt.Println("Error exporting csv.", err)
+			panic(err)
 		}
 
 		defer csvFile.Close()
 
 		writer := csv.NewWriter(csvFile)
-
-		header := []string{"Database Name", "Username", "Email", "Password", "Hashed Password", "Name", "Address", "Phone"}
-		writer.Write(header)
 
 		for _, entry := range jsonAPI.Entries {
 			var row []string
@@ -88,4 +84,22 @@ func ParseDH(body []byte, outfile string) {
 	fmt.Println("[*] Total leaks found: ", total)
 	fmt.Println("[*] Your API balance remaining: ", strconv.Itoa(balance))
 
+}
+
+func SetHeader(outfile string) {
+
+	if outfile != "" {
+		csvFile, err := os.OpenFile(outfile, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0600)
+		if err != nil {
+			panic(err)
+		}
+
+		defer csvFile.Close()
+
+		writer := csv.NewWriter(csvFile)
+
+		header := []string{"Database Name", "Username", "Email", "Password", "Hashed Password", "Name", "Address", "Phone"}
+		writer.Write(header)
+		writer.Flush()
+	}
 }
