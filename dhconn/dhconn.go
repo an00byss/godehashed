@@ -44,9 +44,13 @@ func DHConn(apikey, email, name, searchterm, uname, outfile string, phone int) {
 		parsedh.ParseDH(body, outfile)
 
 	case "name":
+		var searchname string
+
+		searchname = strings.ReplaceAll(name, " ", "+")
+
 		fmt.Println("[*] We are searching for names.")
 		client := http.Client{}
-		req, err := http.NewRequest("GET", DURI+name, nil)
+		req, err := http.NewRequest("GET", DURI+searchname, nil)
 		req.Header.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246")
 		req.Header.Add("Accept", "application/json")
 		req.SetBasicAuth(username, password)
