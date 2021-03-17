@@ -32,7 +32,7 @@ Outfile file name, will output in CSV Format.
 -p int  
 Phone number we are searching for  
 -s string  
-Specify what we are searching for: "name", "email", "phone" or "username". Then add corresponding switch.  
+Specify what we are searching for: "name", "email", "phone", "username" or "list". Then add corresponding switch.  
 -u string  
 Username we are searching for
 -l list  
