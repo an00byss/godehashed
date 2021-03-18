@@ -29,7 +29,7 @@ type DHAPI struct {
 	Total   int    `json:"total"`
 }
 
-func ParseDH(body []byte, outfile string) {
+func ParseDH(body []byte, outfile string) (int, int) {
 	var jsonAPI DHAPI
 
 	err := json.Unmarshal([]byte(body), &jsonAPI)
@@ -81,9 +81,10 @@ func ParseDH(body []byte, outfile string) {
 		fmt.Println(user[x])
 	}
 
-	fmt.Println("[*] Total leaks found: ", total)
-	fmt.Println("[*] Your API balance remaining: ", strconv.Itoa(balance))
+	//fmt.Println("[*] Total leaks found: ", total)
+	fmt.Println("[*] Your API balance remaining:", strconv.Itoa(balance))
 
+	return total, balance
 }
 
 func SetHeader(outfile string) {
